@@ -28,20 +28,20 @@ func main() {
 			fmt.Println("TRIANGULO RETANGULO")
 		} else if a*a < b*b+c*c {
 			fmt.Println("TRIANGULO ACUTANGULO")
-			if a == b && b == c && c == a {
-				fmt.Println("TRIANGULO EQUILATERO")
-			} else if a == b || a == c || c == b {
-				fmt.Println("TRIANGULO ISOSCELES")
-			}
+			equilateralOrIsosceles(a, b, c)
 		} else if a*a > (b*b + c*c) {
 			fmt.Println("TRIANGULO OBTUSANGULO")
-			if a == b && b == c && c == a {
-				fmt.Println("TRIANGULO EQUILATERO")
-			} else if a == b || a == c || c == b {
-				fmt.Println("TRIANGULO ISOSCELES")
-			}
+			equilateralOrIsosceles(a, b, c)
 		}
 
 	}
 
+}
+
+func equilateralOrIsosceles(a, b, c float64) {
+	if a == b && b == c && c == a {
+		fmt.Println("TRIANGULO EQUILATERO")
+	} else if a == b || a == c || c == b {
+		fmt.Println("TRIANGULO ISOSCELES")
+	}
 }
